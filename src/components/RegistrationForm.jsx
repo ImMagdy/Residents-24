@@ -86,7 +86,7 @@ export default function RegistrationForm({ onSubmitSuccess }) {
     setIsSubmitting(true);
     try {
       // TODO: Replace with your actual Google Apps Script Web App URL
-      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyghj-2ILvg5A3iGKjNmyORZkDL_b3aobXHbHxplL2SKQwJf6X7wWPx2z9ddT_iVylmxg/exec';
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxWjSxxH59Lm2d8b0QTXQl8oiA_vi2rUqthFbiLy08MpLRxYKiobuWGQIJJFb42oUl5Bg/exec';
 
       const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
