@@ -285,7 +285,6 @@ export default function RegistrationForm({ onSubmitSuccess }) {
                     <option value="No">No</option>
                     <option value="Yes - Currently have children">Yes - Currently have children</option>
                     <option value="Yes - Planning pregnancy/Expecting">Yes - Planning pregnancy/Expecting</option>
-                    <option value="Prefer not to answer">Prefer not to answer</option>
                   </select>
                   <p className="mt-1.5 text-xs text-slate-500 font-arabic flex flex-col gap-0.5">
                     <span>EN: Do you have children or are you planning a pregnancy during the 3-year residency?</span>
@@ -361,8 +360,8 @@ export default function RegistrationForm({ onSubmitSuccess }) {
                   <option value="Prefer not to answer">Prefer not to answer</option>
                 </select>
                 <p className="mt-1.5 text-xs text-slate-500 font-arabic flex flex-col gap-0.5">
-                  <span>EN: Do you have any chronic medical or psychological conditions?</span>
-                  <span>AR: هل تعاني من أي أمراض مزمنة أو نفسية؟</span>
+                  <span>EN: Do you have any chronic medical or <span className="font-bold text-slate-800">psychological</span> conditions?</span>
+                  <span>AR: هل تعاني من أي أمراض مزمنة أو <span className="font-bold text-slate-800">نفسية</span>؟</span>
                 </p>
                 {errors.medicalHistory && <p className="text-red-500 text-xs mt-1">{errors.medicalHistory}</p>}
               </div>
