@@ -28,7 +28,7 @@ export default function RegistrationForm({ onSubmitSuccess }) {
     if (!formData.nameEn.trim()) newErrors.nameEn = 'Required';
     if (!formData.birthday) newErrors.birthday = 'Required';
     if (!formData.rank) newErrors.rank = 'Required';
-    
+
     // Strict email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim() || !emailRegex.test(formData.email)) {
@@ -48,7 +48,7 @@ export default function RegistrationForm({ onSubmitSuccess }) {
     if (!formData.nextOfKinPhone.trim() || !phoneRegex.test(formData.nextOfKinPhone)) {
       newErrors.nextOfKinPhone = 'Valid phone number required';
     }
-    
+
     if (!formData.militaryStatus) newErrors.militaryStatus = 'Required';
     if (!formData.orientationMeeting) newErrors.orientationMeeting = 'Required';
 
@@ -75,19 +75,19 @@ export default function RegistrationForm({ onSubmitSuccess }) {
     setIsSubmitting(true);
     try {
       // TODO: Replace with your actual Google Apps Script Web App URL
-      const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE';
-      
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyghj-2ILvg5A3iGKjNmyORZkDL_b3aobXHbHxplL2SKQwJf6X7wWPx2z9ddT_iVylmxg/exec';
+
       const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         // Depending on your setup, you might need 'text/plain' to avoid CORS preflight issues
         headers: {
-          'Content-Type': 'text/plain;charset=utf-8', 
+          'Content-Type': 'text/plain;charset=utf-8',
         },
         body: JSON.stringify(formData),
       });
 
       const result = await response.json();
-      
+
       if (result.status === 'success') {
         onSubmitSuccess();
       } else {
@@ -110,11 +110,11 @@ export default function RegistrationForm({ onSubmitSuccess }) {
         </div>
 
         <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-8">
-          
+
           {/* --- Personal Details --- */}
           <section className="space-y-5">
             <h3 className="text-lg font-semibold text-slate-800 border-b pb-2">Personal Details</h3>
-            
+
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">Full Name (Arabic) *</label>
@@ -187,7 +187,7 @@ export default function RegistrationForm({ onSubmitSuccess }) {
           {/* --- Contact Information --- */}
           <section className="space-y-5">
             <h3 className="text-lg font-semibold text-slate-800 border-b pb-2">Contact Information</h3>
-            
+
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">Email Address *</label>
@@ -241,7 +241,7 @@ export default function RegistrationForm({ onSubmitSuccess }) {
           {/* --- Social & Emergency Context --- */}
           <section className="space-y-5">
             <h3 className="text-lg font-semibold text-slate-800 border-b pb-2">Social & Emergency Context</h3>
-            
+
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">Marital Status *</label>
@@ -262,7 +262,7 @@ export default function RegistrationForm({ onSubmitSuccess }) {
 
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-4">
                 <h4 className="font-medium text-slate-700 text-sm">Emergency Contact (Next of Kin)</h4>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1">Name *</label>
                   <input
@@ -275,7 +275,7 @@ export default function RegistrationForm({ onSubmitSuccess }) {
                   />
                   {errors.nextOfKinName && <p className="text-red-500 text-xs mt-1">{errors.nextOfKinName}</p>}
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-1">Relationship *</label>
@@ -310,7 +310,7 @@ export default function RegistrationForm({ onSubmitSuccess }) {
           {/* --- Administrative Details --- */}
           <section className="space-y-5">
             <h3 className="text-lg font-semibold text-slate-800 border-b pb-2">Administrative Details</h3>
-            
+
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">Military Duty Status *</label>
