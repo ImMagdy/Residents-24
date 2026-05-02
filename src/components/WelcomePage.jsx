@@ -24,6 +24,11 @@ export default function WelcomePage({ onNext }) {
           Ain Shams University Hospitals
         </p>
 
+        <div className="bg-red-50 text-red-700 text-sm font-medium px-4 py-3 rounded-lg mb-6 text-left border border-red-100 flex items-start gap-2">
+          <ShieldPlus className="w-5 h-5 mt-0.5 shrink-0" />
+          <p><strong>Disclaimer:</strong> You must complete this registration form, otherwise you will not be officially recognized as a new resident in the department.</p>
+        </div>
+
         <button
           onClick={onNext}
           className="w-full bg-medical-blue hover:bg-medical-blue-dark text-white font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors shadow-md"

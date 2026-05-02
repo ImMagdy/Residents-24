@@ -15,7 +15,9 @@ export default function SuccessPage() {
         </p>
 
         <div className="w-full space-y-4">
-          <h2 className="text-sm font-semibold text-slate-600 uppercase tracking-wider mb-2">Join our communities</h2>
+          <div className="bg-amber-50 text-amber-800 text-sm font-medium px-4 py-3 rounded-lg mb-2 text-left border border-amber-200">
+            <strong>Action Required:</strong> You MUST join all the groups below to receive important schedules and departmental announcements.
+          </div>
           
           <a
             href="https://chat.whatsapp.com/G0DPZ00fWu4KvnAYBemDtL?mode=gi_t"
