@@ -38,10 +38,10 @@ export default function RegistrationForm({ onSubmitSuccess }) {
       newErrors.email = 'Valid email is required';
     }
 
-    // Strict phone validation (+201006146014 format)
-    const phoneRegex = /^\+[1-9]\d{6,14}$/;
+    // Local phone validation (01006146014 format)
+    const phoneRegex = /^01\d{9}$/;
     if (!formData.phone.trim() || !phoneRegex.test(formData.phone)) {
-      newErrors.phone = 'Valid phone number with country code is required';
+      newErrors.phone = 'Valid 11-digit phone number is required';
     }
 
     if (!formData.address.trim()) newErrors.address = 'Required';
@@ -52,7 +52,7 @@ export default function RegistrationForm({ onSubmitSuccess }) {
     if (!formData.nextOfKinName.trim()) newErrors.nextOfKinName = 'Required';
     if (!formData.nextOfKinRelation.trim()) newErrors.nextOfKinRelation = 'Required';
     if (!formData.nextOfKinPhone.trim() || !phoneRegex.test(formData.nextOfKinPhone)) {
-      newErrors.nextOfKinPhone = 'Valid phone number required';
+      newErrors.nextOfKinPhone = 'Valid 11-digit phone number is required';
     }
 
     if (!formData.medicalHistory) newErrors.medicalHistory = 'Required';
@@ -221,11 +221,11 @@ export default function RegistrationForm({ onSubmitSuccess }) {
                   value={formData.phone}
                   onChange={handleChange}
                   className={`w-full p-3 border rounded-xl focus:ring-2 focus:ring-medical-blue/20 focus:border-medical-blue outline-none transition-all ${errors.phone ? 'border-red-500' : 'border-slate-200'}`}
-                  placeholder="+201000000000"
+                  placeholder="01000000000"
                 />
                 <p className="mt-1.5 text-xs text-slate-500 font-arabic flex flex-col gap-0.5">
-                  <span>EN: Must include the country code, e.g., +2010...</span>
-                  <span>AR: يجب أن يتضمن كود الدولة، مثال: +2010...</span>
+                  <span>EN: Must be an 11-digit local number, e.g., 0100...</span>
+                  <span>AR: يجب أن يكون رقماً محلياً من ١١ رقماً، مثال: ...0100</span>
                 </p>
                 {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
               </div>
@@ -332,7 +332,7 @@ export default function RegistrationForm({ onSubmitSuccess }) {
                       value={formData.nextOfKinPhone}
                       onChange={handleChange}
                       className={`w-full p-3 border rounded-xl focus:ring-2 focus:ring-medical-blue/20 focus:border-medical-blue outline-none transition-all ${errors.nextOfKinPhone ? 'border-red-500' : 'border-slate-200'}`}
-                      placeholder="+201000000000"
+                      placeholder="01000000000"
                     />
                     {errors.nextOfKinPhone && <p className="text-red-500 text-xs mt-1">{errors.nextOfKinPhone}</p>}
                   </div>
