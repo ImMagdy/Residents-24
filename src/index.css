@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-medical-blue: #0A3D91;
+  --color-medical-blue-dark: #072a66;
+  --color-medical-gold: #F2A900;
+  --color-medical-gold-hover: #d19200;
+  --font-sans: 'Inter', 'Cairo', sans-serif;
+  --font-arabic: 'Cairo', sans-serif;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 font-sans antialiased;
+}
