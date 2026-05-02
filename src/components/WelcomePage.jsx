@@ -42,7 +42,7 @@ export default function WelcomePage({ onNext }) {
                 <UserRound className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-semibold text-slate-900">Dr. Magdy</h3>
+                <h3 className="font-semibold text-slate-900">Magdy</h3>
                 <p className="text-xs text-slate-500">Chief Resident / Admin</p>
               </div>
             </div>
@@ -63,7 +63,7 @@ export default function WelcomePage({ onNext }) {
                 <UserRound className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-semibold text-slate-900">Dr. Ahmed Hany</h3>
+                <h3 className="font-semibold text-slate-900">Ahmed Hany</h3>
                 <p className="text-xs text-slate-500">Chief Resident / Admin</p>
               </div>
             </div>
