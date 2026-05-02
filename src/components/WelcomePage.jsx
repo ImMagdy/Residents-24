@@ -24,13 +24,11 @@ export default function WelcomePage({ onNext }) {
           Ain Shams University Hospitals
         </p>
 
-        <div className="bg-red-50 text-red-700 text-sm font-medium px-4 py-3 rounded-lg mb-6 text-left border border-red-100 flex items-start gap-2 flex-col">
-          <div className="flex items-start gap-2">
-            <ShieldPlus className="w-5 h-5 mt-0.5 shrink-0" />
+        <div className="bg-red-50 text-red-700 text-sm font-medium px-4 py-3.5 rounded-xl mb-6 text-left border border-red-100 flex items-start gap-3 shadow-sm">
+          <ShieldPlus className="w-5 h-5 mt-0.5 shrink-0 text-red-600" />
+          <div className="space-y-2 leading-relaxed">
             <p><strong>Disclaimer:</strong> You must complete this registration form, otherwise you will not be officially recognized as a new resident in the department.</p>
-          </div>
-          <div className="mt-2 text-xs text-red-600 border-t border-red-200/50 pt-2 w-full">
-            <strong>Privacy Notice:</strong> All data provided is strictly confidential, securely stored, and accessed exclusively by the Chief Resident. Your information will not be shared with any third parties or other residents.
+            <p><strong>Privacy Notice:</strong> All data provided is strictly confidential, securely stored, and accessed exclusively by the Chief Resident. Your information will not be shared with any third parties or other residents.</p>
           </div>
         </div>
 
