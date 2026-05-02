@@ -57,7 +57,7 @@ export default function WelcomePage({ onNext }) {
               </div>
             </div>
             <a
-              href="/magdy.vcf"
+              href={`${import.meta.env.BASE_URL}magdy.vcf`}
               download="magdy.vcf"
               className="flex items-center gap-1.5 text-sm font-medium text-medical-blue bg-medical-blue/5 hover:bg-medical-blue/15 px-3 py-2 rounded-lg transition-colors"
             >
@@ -80,7 +80,7 @@ export default function WelcomePage({ onNext }) {
               </div>
             </div>
             <a
-              href="/ahmed_hany.vcf"
+              href={`${import.meta.env.BASE_URL}ahmed_hany.vcf`}
               download="ahmed_hany.vcf"
               className="flex items-center gap-1.5 text-sm font-medium text-medical-blue bg-medical-blue/5 hover:bg-medical-blue/15 px-3 py-2 rounded-lg transition-colors"
             >
