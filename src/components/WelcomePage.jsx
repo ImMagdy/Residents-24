@@ -21,7 +21,7 @@ export default function WelcomePage({ onNext }) {
 
         <h1 className="text-2xl font-bold text-slate-900 mb-2">Welcome to the Anesthesia Department</h1>
         <p className="text-slate-500 mb-6 text-sm">
-          Ain Shams University Hospitals & El Demerdash Hospital
+          Ain Shams University Hospitals
         </p>
 
         <button
