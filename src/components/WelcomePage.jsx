@@ -48,7 +48,7 @@ export default function WelcomePage({ onNext }) {
               />
               <div>
                 <h3 className="font-semibold text-slate-900">Magdy</h3>
-                <p className="text-xs text-slate-500">Chief Resident / Admin</p>
+                <p className="text-xs text-slate-500">Chief Resident</p>
               </div>
             </div>
             <a
@@ -71,7 +71,7 @@ export default function WelcomePage({ onNext }) {
               />
               <div>
                 <h3 className="font-semibold text-slate-900">Ahmed Hany</h3>
-                <p className="text-xs text-slate-500">Chief Resident / Admin</p>
+                <p className="text-xs text-slate-500">Chief Resident</p>
               </div>
             </div>
             <a
