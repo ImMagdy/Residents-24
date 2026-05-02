@@ -17,6 +17,9 @@ export default function RegistrationForm({ onSubmitSuccess }) {
     militaryStatus: '',
     expectedDeploymentMonth: '',
     orientationMeeting: '',
+    familyPlanning: '',
+    medicalHistory: '',
+    treatmentAccommodations: '',
   });
 
   const [errors, setErrors] = useState({});
@@ -43,10 +46,18 @@ export default function RegistrationForm({ onSubmitSuccess }) {
 
     if (!formData.address.trim()) newErrors.address = 'Required';
     if (!formData.maritalStatus) newErrors.maritalStatus = 'Required';
+    if (formData.maritalStatus === 'Married' && !formData.familyPlanning) {
+      newErrors.familyPlanning = 'Required';
+    }
     if (!formData.nextOfKinName.trim()) newErrors.nextOfKinName = 'Required';
     if (!formData.nextOfKinRelation.trim()) newErrors.nextOfKinRelation = 'Required';
     if (!formData.nextOfKinPhone.trim() || !phoneRegex.test(formData.nextOfKinPhone)) {
       newErrors.nextOfKinPhone = 'Valid phone number required';
+    }
+
+    if (!formData.medicalHistory) newErrors.medicalHistory = 'Required';
+    if (formData.medicalHistory === 'Yes' && !formData.treatmentAccommodations.trim()) {
+      newErrors.treatmentAccommodations = 'Required';
     }
 
     if (!formData.militaryStatus) newErrors.militaryStatus = 'Required';
@@ -261,6 +272,29 @@ export default function RegistrationForm({ onSubmitSuccess }) {
                 {errors.maritalStatus && <p className="text-red-500 text-xs mt-1">{errors.maritalStatus}</p>}
               </div>
 
+              {formData.maritalStatus === 'Married' && (
+                <div className="animate-in fade-in slide-in-from-top-2 duration-300">
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Family Planning (Residency Period) *</label>
+                  <select
+                    name="familyPlanning"
+                    value={formData.familyPlanning}
+                    onChange={handleChange}
+                    className={`w-full p-3 border rounded-xl bg-white focus:ring-2 focus:ring-medical-blue/20 focus:border-medical-blue outline-none transition-all ${errors.familyPlanning ? 'border-red-500' : 'border-slate-200'}`}
+                  >
+                    <option value="">Select Option</option>
+                    <option value="No">No</option>
+                    <option value="Yes - Currently have children">Yes - Currently have children</option>
+                    <option value="Yes - Planning pregnancy/Expecting">Yes - Planning pregnancy/Expecting</option>
+                    <option value="Prefer not to answer">Prefer not to answer</option>
+                  </select>
+                  <p className="mt-1.5 text-xs text-slate-500 font-arabic flex flex-col gap-0.5">
+                    <span>EN: Do you have children or are you planning a pregnancy during the 3-year residency?</span>
+                    <span>AR: هل لديك أطفال أو تخطط/تخططين لحمل خلال فترة النيابة؟</span>
+                  </p>
+                  {errors.familyPlanning && <p className="text-red-500 text-xs mt-1">{errors.familyPlanning}</p>}
+                </div>
+              )}
+
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-4">
                 <h4 className="font-medium text-slate-700 text-sm">Emergency Contact (Next of Kin)</h4>
 
@@ -305,6 +339,52 @@ export default function RegistrationForm({ onSubmitSuccess }) {
                   </div>
                 </div>
               </div>
+            </div>
+          </section>
+
+          {/* --- Occupational Health --- */}
+          <section className="space-y-5">
+            <h3 className="text-lg font-semibold text-slate-800 border-b pb-2">Occupational Health</h3>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Medical History *</label>
+                <select
+                  name="medicalHistory"
+                  value={formData.medicalHistory}
+                  onChange={handleChange}
+                  className={`w-full p-3 border rounded-xl bg-white focus:ring-2 focus:ring-medical-blue/20 focus:border-medical-blue outline-none transition-all ${errors.medicalHistory ? 'border-red-500' : 'border-slate-200'}`}
+                >
+                  <option value="">Select</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                  <option value="Prefer not to answer">Prefer not to answer</option>
+                </select>
+                <p className="mt-1.5 text-xs text-slate-500 font-arabic flex flex-col gap-0.5">
+                  <span>EN: Do you have any chronic medical or psychological conditions?</span>
+                  <span>AR: هل تعاني من أي أمراض مزمنة أو نفسية؟</span>
+                </p>
+                {errors.medicalHistory && <p className="text-red-500 text-xs mt-1">{errors.medicalHistory}</p>}
+              </div>
+
+              {formData.medicalHistory === 'Yes' && (
+                <div className="animate-in fade-in slide-in-from-top-2 duration-300">
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Treatment & Accommodations *</label>
+                  <textarea
+                    name="treatmentAccommodations"
+                    rows={3}
+                    value={formData.treatmentAccommodations}
+                    onChange={handleChange}
+                    className={`w-full p-3 border rounded-xl focus:ring-2 focus:ring-medical-blue/20 focus:border-medical-blue outline-none transition-all resize-none ${errors.treatmentAccommodations ? 'border-red-500' : 'border-slate-200'}`}
+                    placeholder="Provide details here..."
+                  />
+                  <p className="mt-1.5 text-xs text-slate-500 font-arabic flex flex-col gap-0.5">
+                    <span>EN: Please briefly detail if you are currently receiving treatment or if you require any specific workplace accommodations.</span>
+                    <span>AR: يرجى توضيح ما إذا كنت تتلقى أي علاج حالياً أو إذا كنت تحتاج إلى أي تجهيزات خاصة في العمل.</span>
+                  </p>
+                  {errors.treatmentAccommodations && <p className="text-red-500 text-xs mt-1">{errors.treatmentAccommodations}</p>}
+                </div>
+              )}
             </div>
           </section>
 
