@@ -18,33 +18,33 @@ export default function SuccessPage() {
           <h2 className="text-sm font-semibold text-slate-600 uppercase tracking-wider mb-2">Join our communities</h2>
           
           <a
-            href="#"
+            href="https://chat.whatsapp.com/G0DPZ00fWu4KvnAYBemDtL?mode=gi_t"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-colors shadow-sm"
           >
             <MessageCircle className="w-5 h-5" />
-            Join WhatsApp Group 1
+            Anaesthesia Community Whatsapp Group
           </a>
 
           <a
-            href="#"
+            href="https://chat.whatsapp.com/LZk5NyCyehY4haxyElsBGS?mode=gi_t"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-colors shadow-sm"
           >
             <MessageCircle className="w-5 h-5" />
-            Join WhatsApp Group 2
+            Official Anaesthesia Residents '24
           </a>
 
           <a
-            href="#"
+            href="https://www.facebook.com/groups/1682354225233732"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full bg-[#1877F2] hover:bg-[#166fe5] text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-colors shadow-sm"
           >
             <Users className="w-5 h-5" />
-            Join Facebook Page
+            Anaesthesia Department Official Facebook Group
           </a>
         </div>
       </div>
