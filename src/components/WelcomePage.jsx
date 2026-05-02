@@ -1,19 +1,22 @@
 import React from 'react';
 import { UserPlus, ArrowRight, ShieldPlus, UserRound } from 'lucide-react';
 
+import ainShamsLogo from '../assets/ain-shams-logo.png';
+import magdyPic from '../assets/magdy-pic.jpg';
+import hanyPic from '../assets/hany-pic.jpg';
+
 export default function WelcomePage({ onNext }) {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col items-center py-10 px-4">
       {/* Header Section */}
       <div className="w-full max-w-md bg-white rounded-2xl shadow-sm p-8 mb-6 border border-slate-100 flex flex-col items-center text-center">
-        {/* Logos Placeholder */}
-        <div className="flex justify-center gap-6 mb-6">
-          <div className="w-20 h-20 rounded-full bg-slate-100 border-2 border-medical-blue flex items-center justify-center text-medical-blue/40 text-xs font-semibold p-2 text-center">
-            Ain Shams<br/>Logo
-          </div>
-          <div className="w-20 h-20 rounded-full bg-slate-100 border-2 border-medical-blue flex items-center justify-center text-medical-blue/40 text-xs font-semibold p-2 text-center">
-            El Demerdash<br/>Logo
-          </div>
+        {/* Logos */}
+        <div className="flex justify-center mb-6">
+          <img 
+            src={ainShamsLogo} 
+            alt="Ain Shams Logo" 
+            className="h-24 object-contain" 
+          />
         </div>
 
         <h1 className="text-2xl font-bold text-slate-900 mb-2">Welcome to the Anesthesia Department</h1>
@@ -38,9 +41,11 @@ export default function WelcomePage({ onNext }) {
           {/* Magdy Contact Card */}
           <div className="bg-white rounded-xl shadow-sm p-4 border border-slate-100 flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center text-medical-blue">
-                <UserRound className="w-6 h-6" />
-              </div>
+              <img 
+                src={magdyPic} 
+                alt="Magdy" 
+                className="w-12 h-12 rounded-full object-cover border border-slate-200" 
+              />
               <div>
                 <h3 className="font-semibold text-slate-900">Magdy</h3>
                 <p className="text-xs text-slate-500">Chief Resident / Admin</p>
@@ -59,9 +64,11 @@ export default function WelcomePage({ onNext }) {
           {/* Ahmed Hany Contact Card */}
           <div className="bg-white rounded-xl shadow-sm p-4 border border-slate-100 flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center text-medical-blue">
-                <UserRound className="w-6 h-6" />
-              </div>
+              <img 
+                src={hanyPic} 
+                alt="Ahmed Hany" 
+                className="w-12 h-12 rounded-full object-cover border border-slate-200" 
+              />
               <div>
                 <h3 className="font-semibold text-slate-900">Ahmed Hany</h3>
                 <p className="text-xs text-slate-500">Chief Resident / Admin</p>
