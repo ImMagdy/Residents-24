@@ -439,9 +439,9 @@ export default function RegistrationForm({ onSubmitSuccess }) {
                   className={`w-full p-3 border rounded-xl bg-white focus:ring-2 focus:ring-medical-blue/20 focus:border-medical-blue outline-none transition-all ${errors.orientationMeeting ? 'border-red-500' : 'border-slate-200'}`}
                 >
                   <option value="">Select Date</option>
-                  <option value="May 13">May 13</option>
-                  <option value="May 14">May 14</option>
-                  <option value="May 15">May 15</option>
+                  <option value="October 13">October 13</option>
+                  <option value="October 14">October 14</option>
+                  <option value="October 15">October 15</option>
                   <option value="To be determined">To be determined</option>
                 </select>
                 {errors.orientationMeeting && <p className="text-red-500 text-xs mt-1">{errors.orientationMeeting}</p>}
