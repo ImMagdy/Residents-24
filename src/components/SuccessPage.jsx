@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, MessageCircle, Users } from 'lucide-react';
+import { CheckCircle2, Users } from 'lucide-react';
 
 export default function SuccessPage() {
   return (
@@ -16,29 +16,9 @@ export default function SuccessPage() {
 
         <div className="w-full space-y-4">
           <div className="bg-amber-50 text-amber-800 text-sm font-medium px-4 py-3 rounded-lg mb-2 text-left border border-amber-200">
-            <strong>Action Required:</strong> You MUST join all the groups below to receive important schedules and departmental announcements.
+            <strong>Action Required:</strong> You MUST join the group below to receive important schedules and departmental announcements.
           </div>
           
-          <a
-            href="https://chat.whatsapp.com/G0DPZ00fWu4KvnAYBemDtL?mode=gi_t"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-colors shadow-sm"
-          >
-            <MessageCircle className="w-5 h-5" />
-            Anaesthesia Community Whatsapp Group
-          </a>
-
-          <a
-            href="https://chat.whatsapp.com/LZk5NyCyehY4haxyElsBGS?mode=gi_t"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-colors shadow-sm"
-          >
-            <MessageCircle className="w-5 h-5" />
-            Official Anaesthesia Residents '24
-          </a>
-
           <a
             href="https://www.facebook.com/groups/1682354225233732"
             target="_blank"
