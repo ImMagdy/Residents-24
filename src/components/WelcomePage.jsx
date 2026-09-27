@@ -3,7 +3,6 @@ import { UserPlus, ArrowRight, ShieldPlus, UserRound } from 'lucide-react';
 
 import ainShamsLogo from '../assets/ain-shams-logo.png';
 import magdyPic from '../assets/magdy-pic.jpg';
-import hanyPic from '../assets/hany-pic.jpg';
 
 export default function WelcomePage({ onNext }) {
   return (
@@ -62,29 +61,6 @@ export default function WelcomePage({ onNext }) {
             <a
               href={`${import.meta.env.BASE_URL}magdy.vcf`}
               download="magdy.vcf"
-              className="flex items-center gap-1.5 text-sm font-medium text-medical-blue bg-medical-blue/5 hover:bg-medical-blue/15 px-3 py-2 rounded-lg transition-colors"
-            >
-              <UserPlus className="w-4 h-4" />
-              Save
-            </a>
-          </div>
-
-          {/* Ahmed Hany Contact Card */}
-          <div className="bg-white rounded-xl shadow-sm p-4 border border-slate-100 flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <img 
-                src={hanyPic} 
-                alt="Ahmed Hany" 
-                className="w-12 h-12 rounded-full object-cover border border-slate-200" 
-              />
-              <div>
-                <h3 className="font-semibold text-slate-900">Ahmed Hany</h3>
-                <p className="text-xs text-slate-500">Chief Resident</p>
-              </div>
-            </div>
-            <a
-              href={`${import.meta.env.BASE_URL}ahmed_hany.vcf`}
-              download="ahmed_hany.vcf"
               className="flex items-center gap-1.5 text-sm font-medium text-medical-blue bg-medical-blue/5 hover:bg-medical-blue/15 px-3 py-2 rounded-lg transition-colors"
             >
               <UserPlus className="w-4 h-4" />
